@@ -7,19 +7,22 @@
 <meta name="robots" content="noindex">
 <style>
   /* Schriften lokal eingebunden, keine Verbindung zu Google */
-  @font-face{font-family:'Manrope';font-style:normal;font-weight:400 800;font-display:swap;src:url(font-manrope-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
-  @font-face{font-family:'Manrope';font-style:normal;font-weight:400 800;font-display:swap;src:url(font-manrope-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+  @font-face{font-family:'Libre Franklin';font-style:normal;font-weight:400 700;font-display:swap;src:url(font-franklin-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
+  @font-face{font-family:'Libre Franklin';font-style:normal;font-weight:400 700;font-display:swap;src:url(font-franklin-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+  @font-face{font-family:'Newsreader';font-style:normal;font-weight:400 700;font-display:swap;src:url(font-newsreader-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
+  @font-face{font-family:'Newsreader';font-style:normal;font-weight:400 700;font-display:swap;src:url(font-newsreader-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
   :root{--ink:#0a0a0a;--sand-2:#ffffff;--stone:#6b6b6b;--accent:#0a0a0a;--line:rgba(0,0,0,.12)}
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:Manrope,system-ui,sans-serif;color:var(--ink);background:var(--sand-2);line-height:1.7;-webkit-font-smoothing:antialiased}
+  body{font-family:'Newsreader',Georgia,serif;font-size:1.05rem;color:var(--ink);background:var(--sand-2);line-height:1.7;-webkit-font-smoothing:antialiased}
   a{color:inherit}
+  .back,.sub,.note,h2,h3,footer{font-family:'Libre Franklin',system-ui,sans-serif}
   header{background:var(--ink);color:#fff}
   .bar{max-width:820px;margin:0 auto;padding:0 16px;height:72px;display:flex;align-items:center;justify-content:space-between}
-  .logo{font-family:Manrope,system-ui,sans-serif;font-size:1.35rem;font-weight:800;letter-spacing:.14em;text-decoration:none}
+  .logo{font-family:'Newsreader',Georgia,serif;font-size:1.5rem;font-weight:700;letter-spacing:.05em;text-decoration:none}
   .back{font-size:.9rem;opacity:.8;text-decoration:none}
   .back:hover{opacity:1}
   main{max-width:820px;margin:0 auto;padding:64px 16px 90px}
-  h1{font-family:Manrope,system-ui,sans-serif;font-weight:700;letter-spacing:-.025em;font-size:clamp(2.2rem,5vw,3rem);margin-bottom:8px}
+  h1{font-family:'Newsreader',Georgia,serif;font-weight:600;letter-spacing:-.015em;font-size:clamp(2.2rem,5vw,3rem);margin-bottom:8px}
   .sub{color:var(--stone);margin-bottom:40px}
   .note{background:#f2f2f2;border:1px solid var(--line);border-radius:12px;padding:14px 18px;font-size:.92rem;color:#555;margin-bottom:40px}
   .note b{color:var(--ink)}

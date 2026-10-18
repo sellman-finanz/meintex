@@ -118,9 +118,10 @@
   /* Prozess */
   .process{background:var(--sand)}
   .steps{display:grid;grid-template-columns:repeat(7,1fr);gap:12px;margin-top:56px;counter-reset:s}
-  .step{position:relative;padding-top:56px}
-  .step::before{counter-increment:s;content:counter(s,decimal-leading-zero);position:absolute;top:0;left:0;font-family:"Playfair Display",serif;font-size:1.9rem;color:var(--accent)}
-  .step::after{content:"";position:absolute;top:22px;left:52px;right:-6px;height:1px;background:rgba(18,18,18,.25)}
+  .step{position:relative;display:flex;flex-direction:column}
+  .step video{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;background:#d8cfbf;order:-2;margin-bottom:16px}
+  .step::before{counter-increment:s;content:counter(s,decimal-leading-zero);order:-1;font-family:"Playfair Display",serif;font-size:1.9rem;line-height:1.2;color:var(--accent);margin-bottom:8px}
+  .step::after{display:none}
   .step:last-child::after{display:none}
   .step h3{font-family:Inter,sans-serif;font-size:.98rem;font-weight:600;margin-bottom:6px}
   .step p{font-size:.86rem;color:#4a463f}
@@ -339,13 +340,13 @@
     <span class="eyebrow reveal">Process</span>
     <h2 class="reveal">From enquiry to delivery.</h2>
     <div class="steps">
-      <div class="step reveal"><h3>Enquiry</h3><p>You describe product, quantity and deadline.</p></div>
-      <div class="step reveal"><h3>Qualification</h3><p>We check feasibility and get back to you personally.</p></div>
-      <div class="step reveal"><h3>Specification</h3><p>Material, sizes, branding, tech pack.</p></div>
-      <div class="step reveal"><h3>Sampling</h3><p>Samples for approval before the series.</p></div>
-      <div class="step reveal"><h3>Approval</h3><p>Quote, delivery window and production plan.</p></div>
-      <div class="step reveal"><h3>Production &amp; QC</h3><p>Series production with quality control.</p></div>
-      <div class="step reveal"><h3>Shipping</h3><p>Packed and delivered to DE/EU.</p></div>
+      <div class="step reveal"><video class="lazyvid" muted loop playsinline preload="none" data-src="step-1.mp4" aria-hidden="true"></video><h3>Enquiry</h3><p>You describe product, quantity and deadline.</p></div>
+      <div class="step reveal"><video class="lazyvid" muted loop playsinline preload="none" data-src="step-2.mp4" aria-hidden="true"></video><h3>Qualification</h3><p>We check feasibility and get back to you personally.</p></div>
+      <div class="step reveal"><video class="lazyvid" muted loop playsinline preload="none" data-src="step-3.mp4" aria-hidden="true"></video><h3>Specification</h3><p>Material, sizes, branding, tech pack.</p></div>
+      <div class="step reveal"><video class="lazyvid" muted loop playsinline preload="none" data-src="step-4.mp4" aria-hidden="true"></video><h3>Sampling</h3><p>Samples for approval before the series.</p></div>
+      <div class="step reveal"><video class="lazyvid" muted loop playsinline preload="none" data-src="step-5.mp4" aria-hidden="true"></video><h3>Approval</h3><p>Quote, delivery window and production plan.</p></div>
+      <div class="step reveal"><video class="lazyvid" muted loop playsinline preload="none" data-src="step-6.mp4" aria-hidden="true"></video><h3>Production &amp; QC</h3><p>Series production with quality control.</p></div>
+      <div class="step reveal"><video class="lazyvid" muted loop playsinline preload="none" data-src="step-7.mp4" aria-hidden="true"></video><h3>Shipping</h3><p>Packed and delivered to DE/EU.</p></div>
     </div>
   </div>
 </section>
@@ -412,7 +413,7 @@
         <a href="https://wa.me/491633545684" target="_blank" rel="noopener">◉&nbsp; Message on WhatsApp</a>
       </div>
     </div>
-    <form id="leadform" action="https://formspree.io/f/FORMSPREE_ID" method="POST">
+    <form id="leadform" action="https://formspree.io/f/mqpenokv" method="POST">
       <input type="hidden" name="Sprache" value="EN">
       <input type="hidden" name="_subject" value="New project enquiry via meintex.de (EN)">
       <p hidden><label>Do not fill in: <input name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
@@ -476,6 +477,16 @@
   const header = document.querySelector('header');
   addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 40), {passive:true});
   document.querySelectorAll('.nav ul a').forEach(a => a.addEventListener('click', () => document.getElementById('nav').classList.remove('open')));
+
+  // Prozess-Videos erst laden und abspielen, wenn sie sichtbar werden
+  const vio = new IntersectionObserver(es => es.forEach(e => {
+    const v = e.target;
+    if (e.isIntersecting) {
+      if (!v.src) v.src = v.dataset.src;
+      v.play().catch(() => {});
+    } else if (v.src) v.pause();
+  }), {rootMargin: '200px'});
+  document.querySelectorAll('video.lazyvid').forEach(v => vio.observe(v));
 
   const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12});
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));

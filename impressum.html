@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <title>Impressum – MEINTEX</title>
 <meta name="robots" content="noindex">
 <style>
@@ -18,7 +21,8 @@
   .back,.sub,.note,h2,h3,footer{font-family:'Libre Franklin',system-ui,sans-serif}
   header{background:var(--ink);color:#fff}
   .bar{max-width:820px;margin:0 auto;padding:0 16px;height:72px;display:flex;align-items:center;justify-content:space-between}
-  .logo{font-family:'Newsreader',Georgia,serif;font-size:1.5rem;font-weight:700;letter-spacing:.05em;text-decoration:none}
+  .logo{font-family:'Newsreader',Georgia,serif;font-size:1.5rem;font-weight:700;letter-spacing:.05em;text-decoration:none;display:inline-flex;align-items:center;gap:.45em}
+  .logo .mark{height:1.35em;width:auto;flex:none}
   .back{font-size:.9rem;opacity:.8;text-decoration:none}
   .back:hover{opacity:1}
   main{max-width:820px;margin:0 auto;padding:64px 16px 90px}
@@ -37,7 +41,7 @@
 
 <header>
   <div class="bar">
-    <a href="index.html" class="logo">MEINTEX</a>
+    <a href="index.html" class="logo"><svg class="mark" viewBox="0 0 200 248" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="12"><path d="M78,178 C55,155 30,130 30,98 C30,55 62,26 100,26 C138,26 170,55 170,98 C170,130 145,155 122,178 L122,222 L78,222 Z" stroke-linejoin="round"/><path d="M114,209 L58,113 L71,58 L100,98 L129,58 L142,113 L86,209" stroke-linejoin="miter" stroke-miterlimit="10"/></g></svg><span>MEINTEX</span></a>
     <a href="index.html" class="back">← Zur Startseite</a>
   </div>
 </header>

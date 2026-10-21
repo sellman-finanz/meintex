@@ -79,6 +79,8 @@
   .hero .wrap{position:relative;z-index:2;width:100%;text-shadow:0 2px 18px rgba(0,0,0,.45)}
   .hero .eyebrow{color:rgba(255,255,255,.85)}
   @media (min-width:1001px){
+    /* MEINTEX-Ballon (Mitte des Videos) rechts neben den Text schieben */
+    .hero video{transform:scale(1.4);transform-origin:0% 42%}
     body .hero::after{background:linear-gradient(90deg,rgba(0,0,0,.7) 0%,rgba(0,0,0,.35) 38%,rgba(0,0,0,0) 60%),linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,0) 30%,rgba(0,0,0,.45) 100%)}
     body .hero h1{font-size:clamp(2.4rem,3.6vw,3.6rem);max-width:560px}
     body .hero p{max-width:500px}
@@ -282,10 +284,9 @@
 
 <!-- HERO -->
 <section class="hero">
-  <video autoplay muted loop playsinline preload="auto" poster="poster-ballon-meintex.jpg">
-    <source src="ballon-meintex-540.mp4" type="video/mp4" media="(max-width: 760px)">
-    <source src="ballon-meintex-web-1080.mp4" type="video/mp4">
-    <source src="ballon-meintex-720.mp4" type="video/mp4">
+  <video autoplay muted loop playsinline preload="auto" poster="poster-ballon2-v2.jpg">
+    <source src="ballon2-meintex-v2-540.mp4" type="video/mp4" media="(max-width: 760px)">
+    <source src="ballon2-meintex-v2-720.mp4" type="video/mp4">
   </video>
   <div class="wrap">
     <span class="eyebrow" lang="en">B2B Textile Production &amp; Sourcing Partner</span>

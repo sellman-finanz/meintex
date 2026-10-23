@@ -135,6 +135,16 @@
   .behind .facts b{display:block;font-family:var(--serif);font-size:1.7rem;font-weight:600;color:var(--accent)}
   .behind .facts span{font-size:.9rem;opacity:.75}
 
+  /* Sourcing */
+  .sourcing{background:var(--sand)}
+  .src-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:48px;border-top:1.5px solid var(--ink)}
+  .src{padding:26px 28px 6px 0}
+  .src+.src{padding-left:28px;border-left:1px solid var(--line)}
+  .src-n{font-family:var(--serif);font-weight:600;font-size:1.9rem;letter-spacing:-.02em;display:block;margin-bottom:10px}
+  .src h3{font-family:var(--sans);font-size:1.02rem;font-weight:600;margin-bottom:6px}
+  .src p{font-size:.95rem;color:#555}
+  @media (max-width:760px){.src-grid{grid-template-columns:1fr}.src,.src+.src{padding:22px 0 8px;border-left:0;border-bottom:1px solid var(--line)}}
+
   /* Leistungen */
   .services{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:48px}
   .service{background:var(--sand-2);padding:32px 26px}
@@ -365,6 +375,20 @@
   </div>
 </section>
 
+<!-- SOURCING -->
+<section class="sourcing" id="sourcing">
+  <div class="wrap">
+    <span class="eyebrow reveal">Sourcing across Europe</span>
+    <h2 class="reveal">We find what you are looking for. At the best possible price.</h2>
+    <p class="lead reveal">Alongside our production partners, we work with a network of textile traders across Europe. Whether specific fabrics, branded goods, stock items or hard-to-find articles: we compare offers for you and source exactly what you need.</p>
+    <div class="src-grid">
+      <div class="src reveal"><span class="src-n">01</span><h3>Europe-wide trader network</h3><p>Access to fabrics, stock goods and finished textiles from many suppliers.</p></div>
+      <div class="src reveal"><span class="src-n">02</span><h3>Offers compared</h3><p>We collect prices and recommend the most economical solution.</p></div>
+      <div class="src reveal"><span class="src-n">03</span><h3>Everything from one source</h3><p>Purchasing, quality inspection and delivery through one contact person.</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- LEISTUNGEN -->
 <section id="leistungen">
   <div class="wrap">
@@ -445,6 +469,7 @@
       <details><summary>How long does production take?</summary><p>That depends on quantity, product and material. After reviewing your project you receive a concrete delivery window.</p></details>
       <details><summary>Which finishing options do you offer?</summary><p>Among others embroidery, screen printing, DTF and DTG, plus private label elements such as labels, hangtags and packaging.</p></details>
       <details><summary>Where is production based?</summary><p>We produce with selected partner factories in Turkey and Portugal. Depending on product, quantity and lead time, we choose the right location. MEINTEX handles project management, quality control and logistics to Germany and the EU.</p></details>
+      <details><summary>Can you also source goods you do not produce yourselves?</summary><p>Yes. Through our network of textile traders across Europe we also find fabrics, branded goods and stock items. We compare offers for you and source at the best possible price.</p></details>
       <details><summary>Are very large quantities possible?</summary><p>Yes, we accept enquiries up to 500,000+ pieces. We plan large series and framework projects after an individual capacity review.</p></details>
     </div>
   </div>
